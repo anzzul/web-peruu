@@ -1,0 +1,96 @@
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: #e6f2e6; /* verde muy claro como fondo de la selva */
+    color: #2e4d2e; /* verde oscuro selva */
+    padding: 30px;
+    background-image: url('https://www.transparenttextures.com/patterns/green-dust-and-scratches.png');
+}
+
+/* Título principal */
+h1 {
+    text-align: center;
+    color: #1b5e20; /* verde bosque */
+    margin-bottom: 50px;
+    font-size: 2.5em;
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.1);
+}
+
+/* Contenedor padre */
+.padre {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 40px;
+}
+
+/* Contenedor hijo */
+.hijo {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    width: 100%;
+    max-width: 1000px;
+}
+
+/* Cada plato */
+.nieto {
+    background-color: #ffffff;
+    border-left: 10px solid #388e3c; /* verde hoja */
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.nieto:hover {
+    transform: scale(1.02);
+}
+
+/* Título del plato */
+.nieto h2 {
+    color: #2e7d32;
+    margin-bottom: 15px;
+}
+
+/* Imágenes */
+.nieto img {
+    width: 100%;
+    max-height: 300px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 15px;
+    border: 3px solid #a5d6a7; /* verde claro */
+}
+
+/* Lista de descripción */
+.nieto ul {
+    list-style-type: disc;
+    padding-left: 20px;
+}
+
+.nieto ul li {
+    margin-bottom: 10px;
+    line-height: 1.6;
+}
+
+/* Responsivo */
+@media (max-width: 768px) {
+    body {
+        padding: 15px;
+    }
+
+    .nieto img {
+        max-height: 200px;
+    }
+
+    h1 {
+        font-size: 2em;
+    }
+}
